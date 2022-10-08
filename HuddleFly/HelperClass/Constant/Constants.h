@@ -107,6 +107,7 @@
 #define kAPI_PATH_GET_BUZZER_INTERVALS      @"GetBuzzerIntervals"
 #define kAPI_PATH_GET_WATER_CALIB           @"GetWaterCalib"
 #define kAPI_PATH_UPDATE_WATER_WASP         @"UpdateWaterWasp"
+#define kAPI_PATH_GET_WATER_WASP            @"GetWaterWasp"
 
 //API Param
 #define kAPI_PARAM_LOGINTYPE                @"LoginType"
@@ -214,6 +215,19 @@
 #define kAPI_PARAM_MEDIAMODE                @"MediaMode"
 #define kAPI_PARAM_MEDIAMEDIUM              @"MediaMedium"
 #define kAPI_PARAM_MEDIAURL                 @"MediaURL"
+
+// MARK: - Device Preferences
+
+#define kAPI_PARAM_THRESHOLD                @"EI_Thres"
+#define kAPI_PARAM_GRACE_PERIOD             @"Avg_Water_Reset_Time"
+#define kAPI_PARAM_ALERT1                   @"Water_Alert1"
+#define kAPI_PARAM_ALERT2                   @"Water_Alert2"
+#define kAPI_PARAM_ALERT3                   @"Water_Alert3"
+#define kAPI_PARAM_ALERT4                   @"Water_Alert4"
+#define kAPI_PARAM_FINAL_ALERT              @"Water_Killer"
+#define kAPI_PARAM_ALERT_RESET              @"Water_Killer_Reset_Time"
+#define kAPI_PARAM_BUZZER_INTERVAL          @"Beep_Warning_Interval"
+#define kAPI_PARAM_CALIBRATION              @"Avg_Gpm"
 
 /*
 https://app.huddlefly.net/User/Mobile/SaveUserPreference?

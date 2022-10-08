@@ -172,16 +172,18 @@
 #pragma mark - Loading View
 
 -(void) showHUDLoadingView:(NSString *)strTitle {
-    if (HUD==nil) {
-        HUD = [[MBProgressHUD alloc] initWithView:self.window];
-        [self.window addSubview:HUD];
-        
-    }
-    //HUD.delegate = self;
-    //HUD.labelText = [strTitle isEqualToString:@""] ? @"Loading...":strTitle;
-    [self.window bringSubviewToFront:HUD];
-    HUD.detailsLabelText=[strTitle isEqualToString:@""] ? @"Loading...":strTitle;
-    [HUD show:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (HUD==nil) {
+            HUD = [[MBProgressHUD alloc] initWithView:self.window];
+            [self.window addSubview:HUD];
+
+        }
+            //HUD.delegate = self;
+            //HUD.labelText = [strTitle isEqualToString:@""] ? @"Loading...":strTitle;
+        [self.window bringSubviewToFront:HUD];
+        HUD.detailsLabelText=[strTitle isEqualToString:@""] ? @"Loading...":strTitle;
+        [HUD show:YES];
+    });
 }
 
 -(void) hideHUDLoadingView {
