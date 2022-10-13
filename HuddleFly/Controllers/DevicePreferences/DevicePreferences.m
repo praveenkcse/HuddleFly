@@ -227,13 +227,7 @@
     selectedAlertReset = [[AlertObject alloc] init];
     selectedBuzzerInterval = [[BuzzerInterval alloc] init];
     selectedCalibration = [[PathCalib alloc] init];
-    /*
-    [self getWaterDetThres];
-    [self getWaterAlertList];
-    [self getWaterGracePeriod];
-    [self getBuzzerInterval];
-    [self getPathCalib];
-    */
+
     dispatch_queue_t dispatchQueue = dispatch_queue_create("apiCalls", DISPATCH_QUEUE_CONCURRENT);
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_async(group, dispatchQueue, ^(void) {
@@ -284,6 +278,7 @@
     isWaterCheck = !isWaterCheck;
     [self.imgWaterCheck setImage: isWaterCheck ? [UIImage systemImageNamed:@"checkmark.square.fill"] : [UIImage systemImageNamed:@"square"]];
 }
+
 - (IBAction)onThresholdPress:(id)sender {
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:NULL message:@"Threshold" preferredStyle:UIAlertControllerStyleActionSheet];
 
@@ -291,6 +286,7 @@
         [self dismissViewControllerAnimated:YES completion:^{
         }];
     }]];
+
     for(int i=0; i<arrThreshold.count; i++) {
         Threshold *threshold = (Threshold *)[arrThreshold objectAtIndex:i];
         [actionSheet addAction:[UIAlertAction actionWithTitle:[threshold strName] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -298,6 +294,7 @@
             self->selectedThreshold = threshold;
         }]];
     }
+
     [self presentViewController:actionSheet animated:YES completion:nil];
 }
 
@@ -308,6 +305,7 @@
         [self dismissViewControllerAnimated:YES completion:^{
         }];
     }]];
+
     for(int i=0; i<arrGracePeriod.count; i++) {
         GracePeriod *gracePeriod = (GracePeriod *)[arrGracePeriod objectAtIndex:i];
         [actionSheet addAction:[UIAlertAction actionWithTitle:[gracePeriod strName] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -315,6 +313,7 @@
             self->selectedGracePeriod = gracePeriod;
         }]];
     }
+
     [self presentViewController:actionSheet animated:YES completion:nil];
 }
 - (IBAction)onAlert1Press:(id)sender {
