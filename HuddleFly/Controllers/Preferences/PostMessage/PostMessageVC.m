@@ -347,7 +347,8 @@
 //    [dictParam setObject:[[User currentUser] getDeviceId] forKey:kAPI_PARAM_DEVICEID];
 //    [dictParam setObject:strBase64 forKey:@"Base64String"];
     
-    NSURL *url2 = [NSURL URLWithString:@"https://app.huddlefly.net/User/Mobile/PostAnImage2"];
+    NSURL *url2 = [NSURL URLWithString:@"https://app.logiqfish.com/User/Mobile/PostAnImage2"];
+//    NSURL *url2 = [NSURL URLWithString:@"https://app.huddlefly.net/User/Mobile/PostAnImage2"];
     
     NSDictionary *jsonDictionary = @{@"UserID" : [[User currentUser] userID],
                                      @"Base64String"    : strBase64,
@@ -397,7 +398,8 @@
         [dictParam setObject:[[User currentUser] getDeviceId] forKey:kAPI_PARAM_DEVICEID];
         [dictParam setObject:strBase64 forKey:@"Base64String"];
         
-        NSURL *url2 = [NSURL URLWithString:@"https://app.huddlefly.net/User/Mobile/PostAnImage2"];
+        NSURL *url2 = [NSURL URLWithString:@"https://app.logiqfish.com/User/Mobile/PostAnImage2"];
+//        NSURL *url2 = [NSURL URLWithString:@"https://app.huddlefly.net/User/Mobile/PostAnImage2"];
         
         NSDictionary *jsonDictionary = @{@"UserID" : [[User currentUser] userID],
                                          @"Base64String"    : strBase64,

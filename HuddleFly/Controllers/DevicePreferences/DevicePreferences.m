@@ -249,6 +249,15 @@
 
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+}
+
+-(void)setViewLayout: (UIView *) view {
+    [view.layer setBorderColor: [[UIColor systemGrayColor] CGColor]];
+    [view.layer setBorderWidth: 1.0];
+}
+
 #pragma mark Custom methods
 - (void)validateAlerts {
     if(self.tfAlert1.text > self.tfAlert2.text) {

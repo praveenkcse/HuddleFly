@@ -51,8 +51,8 @@
 - (void)defaultParameter
 {
     NSString *strFBAppId = @"428719957301782";
-    NSString *strFBHostApp= @"app.huddlefly.net";//@"huddlefly.co";
-    NSString *strFBRedirectURI = @"https://app.huddlefly.net/";//@"http://huddlefly.co/";
+    NSString *strFBHostApp= @"app.logiqfish.com";// @"app.huddlefly.net";//@"huddlefly.co";
+    NSString *strFBRedirectURI = @"https://app.logiqfish.com/"; //@"https://app.huddlefly.net/";//@"http://huddlefly.co/";
     NSString *strFBSecret = @"aad78a7285dec5be6ff4df87ba4c9e24";
     
     _strFacebookAppID       = strFBAppId;

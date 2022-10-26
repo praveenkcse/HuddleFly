@@ -1,5 +1,6 @@
 //API base
-#define kAPI_URL                        @"https://app.huddlefly.net/User/Mobile/"
+//#define kAPI_URL                        @"https://app.huddlefly.net/User/Mobile/"
+#define kAPI_URL                        @"https://app.logiqfish.com/User/Mobile/"
 
 
 //API Path

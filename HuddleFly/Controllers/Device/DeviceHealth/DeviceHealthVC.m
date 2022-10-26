@@ -206,7 +206,8 @@
         }        
     }
 
-    NSString *strImageUrl = [NSString stringWithFormat:@"https://app.huddlefly.net/user/screencap/%@_%@_screencap.png",_deviceListModel.strUserId,_deviceListModel.strDeviceId];
+    NSString *strImageUrl = [NSString stringWithFormat:@"https://app.logiqfish.com/user/screencap/%@_%@_screencap.png",_deviceListModel.strUserId,_deviceListModel.strDeviceId];
+//    NSString *strImageUrl = [NSString stringWithFormat:@"https://app.huddlefly.net/user/screencap/%@_%@_screencap.png",_deviceListModel.strUserId,_deviceListModel.strDeviceId];
     
     [self imageData:strImageUrl];
 }
@@ -249,7 +250,8 @@
     
     if([segue.identifier isEqualToString:@"segueToFullScreen"]){
     
-        NSString *strImageUrl = [NSString stringWithFormat:@"https://app.huddlefly.net/user/screencap/%@_%@_screencap.png",_deviceListModel.strUserId,_deviceListModel.strDeviceId];
+        NSString *strImageUrl = [NSString stringWithFormat:@"https://app.logiqfish.com/user/screencap/%@_%@_screencap.png",_deviceListModel.strUserId,_deviceListModel.strDeviceId];
+//        NSString *strImageUrl = [NSString stringWithFormat:@"https://app.huddlefly.net/user/screencap/%@_%@_screencap.png",_deviceListModel.strUserId,_deviceListModel.strDeviceId];
         
         FullScreenVC *full = (FullScreenVC *)segue.destinationViewController;
         full.strImageUrl = strImageUrl;
