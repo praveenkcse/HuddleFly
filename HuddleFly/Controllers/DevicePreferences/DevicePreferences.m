@@ -207,7 +207,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [super setNavBarTitle:@"Device Preferences"];
+    [super setNavBarTitle:@"WaterWasp"];
     [super setBackBarItem:YES];
     
     [self onTouchHideKeyboard];
@@ -460,8 +460,13 @@
     [self updateWaterWasp];
 }
 - (IBAction)onWaterLogsPress:(id)sender {
+    NSString *userId = [[User currentUser] userID];
+    NSString *deviceId = [[User currentUser] getDeviceId];
+    NSString *finalUrlString = [NSString stringWithFormat:@"https://app.logiqfish.com/User/UserDetail/WaterLogs?UserID=%@&DeviceID=%@", userId, deviceId];
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString: finalUrlString] options: @{} completionHandler: nil];
 }
 - (IBAction)onSubmitPreferencesPress:(id)sender {
+    
 }
 
 #pragma mark APIs
@@ -653,6 +658,8 @@
                     [self->arrPathCalib addObject:pathCalib];
                 }
             }
+            
+            [[AppDelegate sharedAppDelegate] showToastMessage:@"Updated Successfully"];
         }
         else{
             [[AppDelegate sharedAppDelegate] showToastMessage:error.localizedDescription];

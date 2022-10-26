@@ -7893,10 +7893,10 @@
                                                                         <rect key="frame" x="0.0" y="70" width="270" height="58.5"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pUJ-kQ-DcR">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="270" height="64"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="270" height="60"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Reset After" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCI-0D-QcJ">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="22"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="18"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="22" id="ScH-0G-Oy4"/>
                                                                                         </constraints>
@@ -7905,7 +7905,7 @@
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VhZ-RV-QsL">
-                                                                                        <rect key="frame" x="0.0" y="30" width="270" height="34"/>
+                                                                                        <rect key="frame" x="0.0" y="26" width="270" height="34"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="34" id="yaO-3B-RYr"/>
@@ -7921,7 +7921,7 @@
                                                                                 <color key="tintColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             </imageView>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAA-ly-Map">
-                                                                                <rect key="frame" x="0.0" y="30" width="270" height="34"/>
+                                                                                <rect key="frame" x="0.0" y="26" width="270" height="34"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <connections>
                                                                                     <action selector="onAlertResetAfterPress:" destination="YaZ-As-1eU" eventType="touchUpInside" id="cJD-Iz-OpD"/>
@@ -8207,7 +8207,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7GU-x8-dm0"/>
         <segue reference="3X3-eD-VKK"/>
         <segue reference="zrO-xk-eAs"/>
         <segue reference="uR7-lI-qFP"/>
@@ -8216,7 +8215,7 @@
         <segue reference="6D7-rN-r9Z"/>
         <segue reference="b2l-zX-Bm5"/>
         <segue reference="STl-oo-g3C"/>
-        <segue reference="HOb-fs-KXZ"/>
+        <segue reference="TUi-o7-9Qe"/>
         <segue reference="37v-GG-2GE"/>
     </inferredMetricsTieBreakers>
     <resources>
