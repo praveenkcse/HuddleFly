@@ -39,7 +39,7 @@
     arrOptionData = [[NSMutableArray alloc] init];
     optionsData = [NSMutableDictionary new];
     categories = [NSMutableArray new];
-//    [self getOptionData];
+    [self getOptionData];
     
     [super setHelpBarButton:11];//ADDED BY Kumar 19-JUL-2017
 
@@ -76,7 +76,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self getOptionData];
+//    [self getOptionData];
 }
 
 #pragma mark - Menu 
@@ -737,6 +737,8 @@
             if([strSelectedOption isEqualToString:@"0"]){
                 [[AppDelegate sharedAppDelegate] showToastMessage:@"Preferences sent to device. Please wait 15-30 secs to take effect."];
             }
+
+            [self getOptionData];
         }
         else{
             [[AppDelegate sharedAppDelegate] showToastMessage:error.localizedDescription];
