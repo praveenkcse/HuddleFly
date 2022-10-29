@@ -66,54 +66,6 @@
             endingLineNumber = "410"
             landmarkName = "-updateDeviceSettings"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1A76C15B-7269-4BFB-BD5E-D204CFF664AB - 6330bc43c44add3d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__38-[DeviceSettings updateDeviceSettings]_block_invoke"
-                  moduleName = "HuddleFly"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/praveenkumar/Documents/HuddleFly/HuddleFly/Controllers/Device/DeviceSettings/DeviceSettings.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "412"
-                  endingLineNumber = "412"
-                  offsetFromSymbolStart = "666">
-               </Location>
-               <Location
-                  uuid = "1A76C15B-7269-4BFB-BD5E-D204CFF664AB - 6330bc43c44add3d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__38-[DeviceSettings updateDeviceSettings]_block_invoke"
-                  moduleName = "HuddleFly"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/praveenkumar/Documents/HuddleFly/HuddleFly/Controllers/Device/DeviceSettings/DeviceSettings.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "412"
-                  endingLineNumber = "412"
-                  offsetFromSymbolStart = "679">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "44B23F03-6972-4465-BDDB-056F22877624"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HuddleFly/Controllers/Preferences/PreferencesVC.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "660"
-            endingLineNumber = "660"
-            landmarkName = "-sendSelectedOption"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -145,6 +97,22 @@
             startingLineNumber = "200"
             endingLineNumber = "200"
             landmarkName = "-getUserPreferenceSelected"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECC72C25-4AAA-4E26-B2F4-632006860E6B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuddleFly/Controllers/Preferences/PreferencesVC.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "652"
+            endingLineNumber = "652"
+            landmarkName = "-sendSelectedOption"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
