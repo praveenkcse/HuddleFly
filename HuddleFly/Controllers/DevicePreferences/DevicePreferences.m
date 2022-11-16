@@ -443,7 +443,7 @@
 }
 
 -(IBAction)onEnableBuzzer: (id)sender {
-    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:NULL message:@"Buzzer Interval" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:NULL message:@"Enable Buzzer" preferredStyle:UIAlertControllerStyleActionSheet];
 
     [actionSheet addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         [self dismissViewControllerAnimated:YES completion:^{
@@ -738,7 +738,12 @@
     self->selectedAlertReset = arrAlert[[self findIndexOf: self->alertResetValue from: self->arrAlert]];
     self->selectedBuzzerInterval = arrBuzzerInterval[[self findIndexOf: self->buzzerIntervalValue from: self->arrBuzzerInterval]];
     self->selectedCalibration = arrPathCalib[[self findIndexOf: self->calibrationValue from:arrPathCalib]];
-    self->selectedEnableBuzzer = self->enableBuzzerValue;
+
+    if ([self->enableBuzzerValue isEqualToString: @"1"]) {
+        self->selectedEnableBuzzer = @"Yes";
+    } else {
+        self->selectedEnableBuzzer = @"No";
+    }
 
     [self setFields];
 }
