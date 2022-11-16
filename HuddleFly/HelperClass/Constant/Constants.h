@@ -229,6 +229,7 @@
 #define kAPI_PARAM_ALERT_RESET              @"Water_Killer_Reset_Time"
 #define kAPI_PARAM_BUZZER_INTERVAL          @"Beep_Warning_Interval"
 #define kAPI_PARAM_CALIBRATION              @"Avg_Gpm"
+#define kAPI_PARAM_ENABLE_BUZZER            @"Enable_Buzzer"
 
 /*
 https://app.huddlefly.net/User/Mobile/SaveUserPreference?

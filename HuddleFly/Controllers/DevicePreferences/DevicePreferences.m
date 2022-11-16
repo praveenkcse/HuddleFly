@@ -185,6 +185,7 @@
 @private AlertObject *selectedAlert2;
 @private AlertObject *selectedAlert3;
 @private AlertObject *selectedAlert4;
+@private NSString *selectedEnableBuzzer;
 @private AlertObject *selectedFinalAlert;
 @private AlertObject *selectedAlertReset;
 @private BuzzerInterval *selectedBuzzerInterval;
@@ -198,6 +199,7 @@
 @private NSString *finalAlertValue;
 @private NSString *alertResetValue;
 @private NSString *buzzerIntervalValue;
+@private NSString *enableBuzzerValue;
 @private NSString *calibrationValue;
 
 }
@@ -211,7 +213,8 @@
     [super setBackBarItem:YES];
     
     [self onTouchHideKeyboard];
-    
+
+    selectedEnableBuzzer = NO;
     arrThreshold = [[NSMutableArray alloc] init];
     arrAlert = [[NSMutableArray alloc] init];
     arrGracePeriod = [[NSMutableArray alloc] init];
@@ -438,6 +441,27 @@
     }
     [self presentViewController:actionSheet animated:YES completion:nil];
 }
+
+-(IBAction)onEnableBuzzer: (id)sender {
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:NULL message:@"Buzzer Interval" preferredStyle:UIAlertControllerStyleActionSheet];
+
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        [self dismissViewControllerAnimated:YES completion:^{
+        }];
+    }]];
+
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self->_tfEnableBuzzer setText: @"Yes"];
+        self->selectedEnableBuzzer = @"Yes";
+    }]];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self->_tfEnableBuzzer setText: @"No"];
+        self->selectedEnableBuzzer = @"No";
+    }]];
+
+    [self presentViewController:actionSheet animated:YES completion:nil];
+}
+
 - (IBAction)onCalibrationPress:(id)sender {
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:NULL message:@"Calibration" preferredStyle:UIAlertControllerStyleActionSheet];
 
@@ -621,6 +645,7 @@
         [dictParam setObject:[self->selectedFinalAlert strValue] forKey:kAPI_PARAM_FINAL_ALERT];
         [dictParam setObject:[self->selectedAlertReset strValue] forKey:kAPI_PARAM_ALERT_RESET];
         [dictParam setObject:[self->selectedBuzzerInterval strValue] forKey:kAPI_PARAM_BUZZER_INTERVAL];
+        [dictParam setObject:self->selectedEnableBuzzer forKey:kAPI_PARAM_ENABLE_BUZZER];
         [dictParam setObject:[self->selectedCalibration strValue] forKey:kAPI_PARAM_CALIBRATION];
     }
     
@@ -692,6 +717,7 @@
                 self->alertResetValue = [responseDic valueForKey:kAPI_PARAM_ALERT_RESET];
                 self->buzzerIntervalValue = [responseDic valueForKey:kAPI_PARAM_BUZZER_INTERVAL];
                 self->calibrationValue = [responseDic valueForKey:kAPI_PARAM_CALIBRATION];
+                self->enableBuzzerValue = [responseDic valueForKey: kAPI_PARAM_ENABLE_BUZZER];
                 [self setSelectedValues];
             }
         }
@@ -712,6 +738,7 @@
     self->selectedAlertReset = arrAlert[[self findIndexOf: self->alertResetValue from: self->arrAlert]];
     self->selectedBuzzerInterval = arrBuzzerInterval[[self findIndexOf: self->buzzerIntervalValue from: self->arrBuzzerInterval]];
     self->selectedCalibration = arrPathCalib[[self findIndexOf: self->calibrationValue from:arrPathCalib]];
+    self->selectedEnableBuzzer = self->enableBuzzerValue;
 
     [self setFields];
 }
@@ -727,6 +754,7 @@
     _tfAlertResetAfter.text = self->selectedAlertReset.strName;
     _tfBuzzerInterval.text = self->selectedBuzzerInterval.strName;
     _tfCalibration.text = self->selectedCalibration.strName;
+    _tfEnableBuzzer.text = self->selectedEnableBuzzer;
 }
 
 // MARK: - helper

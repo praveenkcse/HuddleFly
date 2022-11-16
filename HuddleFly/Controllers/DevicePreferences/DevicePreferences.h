@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *tfAlertResetAfter;
 @property (weak, nonatomic) IBOutlet UITextField *tfBuzzerInterval;
 @property (weak, nonatomic) IBOutlet UITextField *tfCalibration;
+@property (weak, nonatomic) IBOutlet UITextField *tfEnableBuzzer;
 @property (weak, nonatomic) IBOutlet UIButton *calibrationButton;
 @property (weak, nonatomic) IBOutlet UIButton *thresholdButton;
 @property (weak, nonatomic) IBOutlet UIButton *gracePeriodButton;
